@@ -1,0 +1,38 @@
+.why{
+    text-align: center;
+    background: var(--LightGrayishBlue);
+    padding: 3em 0;
+    .description{
+        color: var(--GrayishBlue);
+        font-size: .8em;
+        margin-bottom: 4em;
+        line-height: 1.5;
+    }
+    
+    &__grid{
+        &--item{
+            .description{
+                font-size: .7em;
+                margin-bottom: 5em;
+            }
+            img{
+                margin-bottom: 1.1em;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        text-align: left;
+        &__grid{
+            display: grid;
+            gap: 2em;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &__grid{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+}

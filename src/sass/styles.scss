@@ -1,0 +1,87 @@
+
+:root{
+--DarkBlue: hsl(233, 26%, 24%);
+--LimeGreen: hsl(136, 65%, 51%);
+--BrightCyan: hsl(192, 70%, 51%);
+--GrayishBlue: hsl(233, 8%, 62%);
+--LightGrayishBlue: hsl(220, 16%, 96%);
+--VeryLightGray: hsl(0, 0%, 98%);
+--White: hsl(0, 0%, 100%);
+font-size: 18px;
+--WrapperSpace: 1.5em; 
+}
+
+html{
+    overflow-x: hidden;
+}
+body{
+    margin: 0;
+    font-family: 'Public Sans', sans-serif;
+
+}
+
+.wrapper{
+    padding: 0 var(--WrapperSpace);
+    max-width: 1120px;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    // position: relative;
+    box-sizing: border-box;
+}
+
+@mixin title {
+    margin: 0;
+    font-size: 1.9em;
+    color: var(--DarkBlue);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.title{
+    text-align: center;
+    &__h1{
+        @include title;
+    }
+    &__h2{
+        @include title;
+        margin: 0;
+        font-size: 1.5em;
+    }
+    &__h3{
+        @include title;
+        font-size: .75em;
+        font-weight: bold;
+    }
+}
+
+.button{
+    padding: .7em 1.8em;
+    background-image: linear-gradient(to right, var(--LimeGreen) 0%, var(--BrightCyan) 100%);
+    border-radius: 30px;
+    color: var(--White);
+    font-size: 1em;
+    outline: none;
+    border: none;
+}
+
+.is-hidden{
+    display: none !important;
+}
+//header
+@import 'header';
+
+//menu
+@import 'menu';
+
+//hero
+@import 'hero';
+
+//why
+@import 'why';
+
+//latests articles
+@import 'latestArticles';
+
+//footer
+@import 'footer';

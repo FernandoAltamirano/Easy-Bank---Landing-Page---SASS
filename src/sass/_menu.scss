@@ -1,0 +1,39 @@
+.header__content{
+
+    .input_checkbox{
+      display: none;
+      &:checked{
+        & ~ .header__content--menu{
+          background-image: url('../images/icon-close.svg');
+        }
+        & ~ .header__content--list{
+          display: block;
+          position: absolute;
+          z-index: 99999;
+          top: 65%;
+          left: 1em;
+          right: 1em;
+          padding: 1em;
+          height: 30vh;
+          background-color: var(--DarkBlue);
+          // background: linear-gradient(to bottom, var(--DarkBlue) 0%, transparent 100%);
+          a{
+            &:hover{
+              text-decoration: underline;
+            }
+            color: white;
+            padding: .5em 1em;
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+    }
+    &--menu{
+        width: 40px;
+        background: url('../images/icon-hamburger.svg') center no-repeat;
+        @media (min-width: 1024px) {
+          display: none;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.latestArticles{
+    text-align: left;
+    color: var(--GrayishBlue);
+    background-color: var(--VeryLightGray);
+    padding: 3em 0;
+    .title__h1{
+        text-align: center;
+        margin: 1em 0 ;
+    }
+    .title__h3{
+        text-align: left;
+        padding-top: .5em;
+    }
+    &__grid{
+        display: grid;
+        gap: 2em;
+    }
+    &__item{
+        border-radius: .5em;
+        overflow: hidden;
+        background-color: var(--White);
+        &-description{
+            padding: .5em 1em;
+            small{
+                font-size: .6em;
+                margin-top: 2em;
+            }
+        }
+    }
+    
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .description{
+        font-size: .63em;
+        line-height: 1.5;
+       
+    }
+
+    @media (min-width: 768px) {
+        text-align: left;
+        .title__h1{
+            text-align: left;
+        }
+        &__grid{
+            display: grid;
+            gap: 2em;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &__grid{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+    
+}
